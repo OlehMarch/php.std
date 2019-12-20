@@ -1,0 +1,48 @@
+<html>
+<head>
+	<title>MVC Method</title>
+</head>
+<body>
+	<h1>Статья</h1>
+	<p>Текст статьи...</p>
+	<h2>Комментарии</h2>
+	<?php require_once "add_comment.php"; ?>
+	<?php require_once "comments.php"; ?>
+	<?if (count($array) != 0) {?>
+		<table>
+		<?for ($i = 0; $i < count($array); $i++) {?>
+			<tr>
+			<td><b><?=$array[$i]["name"]?>:</b></td>
+			<td><?=$array[$i]["comment"]?></td>
+			</tr>
+			<tr>
+			<td colspan='2'><hr /></td>
+			</tr>
+		<?}?>
+		</table>
+	<?}?>
+	<h3>Добавить комментарий</h3>
+	<form name="myform" action="controller.php" method="post">
+		<table>
+			<tr>
+				<td>Имя:</td>
+				<td>
+					<input style="width:200px" type="text" name="name" />
+				</td>
+			</tr>
+			<tr>
+				<td>Комментарий:</td>
+				<td>
+					<textarea style="max-width:198px;min-width:198px;max-height:100px;" name="comment" cols="20" rows="3"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="submit" name="addcomment" value="Добавить" />
+				</td>
+			</tr>
+		</table>
+	</form>
+	<br /><br /><br /><a href="../index.php">Назад</a><br />
+</body>
+</html>

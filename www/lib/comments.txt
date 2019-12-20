@@ -1,0 +1,10 @@
+Вася;Комментарий 1
+Петя;Комментарий 2
+Коля;Комментарий 3
+Oleg;Semple
+Oleg;Sample of text
+User;something
+Yulya;some text
+юя;привет
+Сергей;коммент
+Unknown User;Hello everyone!!!
